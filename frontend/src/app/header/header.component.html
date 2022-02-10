@@ -1,0 +1,16 @@
+<div class="nav-menu">
+    <div class="content-nav-menu">
+        <h4>Навигационное меню</h4>
+        <a class="link-router" routerLink="">Главная</a>
+        <ng-container *ngIf="isLogIn; else noLogIn">
+            <a class="link-router" routerLink="profile">Личный кабинет</a>
+            <a class="link-router" (click)="logOut()">Выйти</a>
+        </ng-container>
+        <ng-template #noLogIn>
+            <a class="link-router" routerLink="login">Авторизация</a>
+            <a class="link-router" routerLink="sign-up">Регистрация</a>
+        </ng-template>
+
+    </div>
+
+</div>

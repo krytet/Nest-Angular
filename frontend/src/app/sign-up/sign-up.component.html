@@ -1,0 +1,22 @@
+<div class="sign-up-area">
+    <div class="sign-up-form-area">
+        <h1>Регистрация</h1>
+        <form class="sign-up-form" action="">
+            <h3>Логин</h3>
+            <input type="text" name="username" id="username" [(ngModel)]="SignUpForm.username" >
+            <h3>Email</h3>
+            <input type="text" name="email" id="email" [(ngModel)]="SignUpForm.email" >
+            <h3>Имя</h3>
+            <input type="text" name="firstName" id="firstName" [(ngModel)]="SignUpForm.firstName" >
+            <h3>Фамилия</h3>
+            <input type="text" name="lastName" id="lastName" [(ngModel)]="SignUpForm.lastName" >
+            <h3>Пароль</h3>
+            <input type="password" name="password" id="password" [(ngModel)]="SignUpForm.password">
+            <h3>Повторите пароль</h3>
+            <input type="password" name="retryPassword" id="retryPassword" [(ngModel)]="SignUpForm.retryPassword">
+            <h4 class='erorr-text' *ngIf="isErorr">Не правильно заполенна форма</h4>
+            <button (click)="signUp()" >Регистрация</button>
+            <h4 class='loading-text' *ngIf="isLoading">Загрузка ..</h4>
+        </form>
+    </div>
+</div>

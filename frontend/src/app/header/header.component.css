@@ -1,0 +1,21 @@
+div.nav-menu {
+    background-color: rgba(101, 17, 156, 0.61);
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+a.link-router {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+div.content-nav-menu {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,14 @@
+<div class="login-area">
+    <div class="login-form-area">
+        <h1>Авторизация</h1>
+        <form class="login-form" action="">
+            <h3>Логин</h3>
+            <input type="text" name="username" id="username" [(ngModel)]="loginForm.username" >
+            <h3>Пароль</h3>
+            <input type="password" name="password" id="password" [(ngModel)]="loginForm.password">
+            <h4 class='erorr-text' *ngIf="isErorr">Не верный логин или пароль</h4>
+            <button (click)="signIn()" >Войти</button>
+            <h4 class='loading-text' *ngIf="isLoading">Загрузка ..</h4>
+        </form>
+    </div>
+</div>

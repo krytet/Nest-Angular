@@ -1,0 +1,30 @@
+div.profile-area {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 15px 0px;
+}
+
+div.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    min-height: 500px;
+    min-width: 800px;
+    border: 1px solid rgb(94, 85, 85);
+    border-radius: 30px;
+}
+
+div.profile {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 15px;
+    grid-column-gap: 30px;
+}
+
+div.profile .param {
+    align-self: center;
+    justify-self: flex-end;
+}
