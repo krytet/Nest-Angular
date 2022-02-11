@@ -19,12 +19,7 @@ export class UsersController {
 
     @Get(':username')
     async getUserByUsername(@Param('username') username:string) {
-        console.log(username);
         const user = await this.usersService.getUser(username)
-        console.log(user);
-        
-
-        
         return 'Пользователь с username ' + username + user
     }
 

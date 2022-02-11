@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  posts = []
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get('http://127.0.0.1:3000/posts/').subscribe(
+      (res: any) => {
+        this.posts = res
+      }
+    )
   }
 
 }

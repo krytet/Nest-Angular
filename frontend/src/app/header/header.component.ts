@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,13 +10,11 @@ export class HeaderComponent implements OnInit {
 
   isLogIn = false
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     const token = localStorage.getItem('token')
     if (token){
-      console.log(('есть'));
-      // TODO создать связь и проверка через отправку 
       this.isLogIn = true
     }
   }
@@ -23,6 +22,8 @@ export class HeaderComponent implements OnInit {
   logOut() {
     localStorage.removeItem('token')
     console.log('Delete token');
+    this.isLogIn = false
+    this.router.navigate([''])
   }
 
 }

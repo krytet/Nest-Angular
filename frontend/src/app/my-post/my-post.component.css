@@ -1,0 +1,37 @@
+div.posts-page {
+    margin: 10px auto;
+    border: 1px solid #E4E4E7;
+    border-radius: 16px;
+    background-color: #ffffff75;
+    max-width: 800px;
+    padding: 4px;
+}
+
+div.title-page-my-post {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+div.title-page-my-post h2 {
+    flex-grow: 1;
+}
+
+div.title-page-my-post button {
+    height: 32px;
+    margin-right: 8px;
+    border-radius: 6px;
+    background-color: rgba(101, 17, 156, 0.61);
+    border: 1px solid #E4E4E7;
+    color: white;
+    cursor: pointer;
+}
+
+div.posts-page h2 {
+    text-align: center;
+}
+
+div.posts-page hr {
+    border: 1px solid #E4E4E7;
+}
+

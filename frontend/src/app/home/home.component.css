@@ -1,0 +1,17 @@
+div.posts-page {
+    margin: 10px auto;
+    border: 1px solid #E4E4E7;
+    border-radius: 16px;
+    background-color: #ffffff75;
+    max-width: 800px;
+    padding: 4px;
+}
+
+div.posts-page h2 {
+    text-align: center;
+}
+
+div.posts-page hr {
+    border: 1px solid #E4E4E7;
+}
+

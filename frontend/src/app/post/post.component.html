@@ -1,0 +1,35 @@
+<div class="post-info">
+    <a class="link-page-author" routerLink="#">{{ post.author }}</a>
+    <div class="title-edit-post">
+        <h4>{{ post.title }}</h4>
+        <div class="edit-post" *ngIf="isAuthor">
+                        <a (click)="EditPost()">
+                <img src="assets/img/edit.png" alt="edit">
+            </a>
+            <app-dialog-window
+                *ngIf="isEdit"
+                [title]="'Редактирование записи'"
+            >
+                <app-form-create-post
+                    [idPost]='post._id'
+                    [title]='post.title'
+                    [text]='post.text'
+                    [isEdit]='true'
+                    (isProcessPost)="closeWindow($event)"
+                >
+                </app-form-create-post>
+            </app-dialog-window>
+            <a (click)="DeletePost()">
+                <img src="assets/img/delete.png" alt="delete">
+            </a>
+            <app-dialog-window
+                *ngIf="isDelete"
+                [title]="'Удаление записи'"
+            >
+                <h5 class="process-delete" *ngIf="procDelete == 1">Удеаление</h5>
+                <h5 class="delete-complete" *ngIf="procDelete == 2">Запись успешно удлалена</h5>
+            </app-dialog-window>
+        </div>
+    </div>
+    <span>{{ post.text }}</span>
+</div>

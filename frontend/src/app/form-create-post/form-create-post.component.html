@@ -1,0 +1,14 @@
+<form class="post-form" action="">
+    <h3>Заголовок</h3>
+    <input type="text" name="title" id="title" [(ngModel)]="title" >
+    <h3>Сообщение</h3>
+    <textarea rows="10" cols="45" name="text" [(ngModel)]="text"></textarea>
+    <button (click)="CreatePost()" *ngIf="!isEdit" >Создать запись</button>
+    <button (click)="EditPost()" *ngIf="isEdit">Внести изменения</button>
+</form>
+<app-dialog-window
+    *ngIf="statusRes"
+    [title]="'Результат'">
+    <h5 class="process-delete" *ngIf="statusRes == 1">В процессе</h5>
+    <h5 class="delete-complete" *ngIf="statusRes == 2">Успешно</h5>
+</app-dialog-window>

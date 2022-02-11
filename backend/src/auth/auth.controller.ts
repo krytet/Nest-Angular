@@ -13,11 +13,8 @@ export class AuthController {
     @UseGuards(LocalAuthGuard)
     @Post('login')
     async login(@Request() req) {
-        console.log('Hi auth login');
         console.log(req.user);
         const token = this.authService.login(req.user)
-        console.log(token);
-        
         return token;
         //return this.authService.login(req.user);
     }
@@ -26,7 +23,6 @@ export class AuthController {
     @Get('profile')
     async getProfile(@Request() req) {
         console.log(req.user);
-        
         return req.user
     }
 }

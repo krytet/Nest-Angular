@@ -1,0 +1,28 @@
+<div class="posts-page">
+    <div class="title-page-my-post"> 
+        <h2>Мои записи</h2>
+        <button (click)="CreatePost()">Создать запись</button>
+    </div>
+    <app-dialog-window
+        [title]="'Создать запись'"
+        *ngIf="isCreatePost"
+    >
+        <app-form-create-post
+            (isProcessPost)='closeWindow($event)'
+        ></app-form-create-post>
+    </app-dialog-window>
+    <hr>
+    <div class="posts-area" *ngIf="posts; else empty">
+        <div class="post-item" *ngFor="let post of posts">
+            <app-post
+                [post]="post"
+                [isAuthor]="true"
+                (isUpdate)='updatePost($event)'
+            ></app-post>
+            <hr>
+        </div>
+    </div>
+    <ng-template #empty>
+        <h2> Записей не найдено</h2>
+    </ng-template>
+</div>

@@ -12,6 +12,10 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { PostComponent } from './post/post.component';
+import { MyPostComponent } from './my-post/my-post.component';
+import { DialogWindowComponent } from './dialog-window/dialog-window.component';
+import { FormCreatePostComponent } from './form-create-post/form-create-post.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     FooterComponent,
     HomeComponent,
     ProfileComponent,
-    SignUpComponent
+    SignUpComponent,
+    PostComponent,
+    MyPostComponent,
+    DialogWindowComponent,
+    FormCreatePostComponent
   ],
   imports: [
     BrowserModule,

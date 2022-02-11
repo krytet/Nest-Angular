@@ -20,6 +20,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     console.log(payload._doc.email);
     console.log(payload._doc.username);
     const result = {
+      'userId': payload._doc._id,
       'username': payload._doc.username,
       'email': payload._doc.email,
       'firstName': payload._doc.firstName || null,

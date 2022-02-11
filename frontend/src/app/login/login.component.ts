@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router"
-import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -25,10 +24,6 @@ export class LoginComponent implements OnInit {
 
   signIn() {
     this.isLoading = true
-    console.log('!!!!');
-    
-    console.log('Hi login');
-    console.log(this.loginForm);
     const response = this.http.post(
       'http://127.0.0.1:3000/auth/login',
       {

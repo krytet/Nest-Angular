@@ -4,12 +4,14 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
+import { PostsModule } from './posts/posts.module';
 
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb+srv://krytet:krytet@cluster0.pasoh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'),
     UsersModule,
-    AuthModule
+    AuthModule,
+    PostsModule
   ],
   controllers: [AppController],
   providers: [AppService],

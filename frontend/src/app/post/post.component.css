@@ -1,0 +1,42 @@
+div.post-info {
+    padding: 8px;
+}
+
+a.link-page-author {
+    text-decoration: none;
+    color: #7d7f7d;
+    font-size: 12px;
+}
+
+div.title-edit-post {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.title-edit-post h4 {
+    margin: 4px 0px;
+    width: max-content;
+    flex-grow: 1;
+}
+
+div.edit-post a img {
+    height: 16px;
+    width: 16px;
+    margin-left: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+div.edit-post a img:hover {
+    border-radius: 4px;
+    background: #00000020;
+    transition: 0.5s;
+}
+
+h5.process-delete {
+    color: blue;
+}
+
+h5.delete-complete {
+    color: green;
+}
