@@ -18,8 +18,6 @@ export class PostsController {
     @Post()
     @HttpCode(HttpStatus.CREATED)
     createPost(@Request() req, @Body() createPost: CreatePostDto) {
-        console.log('req.user');
-        console.log(req.user);
         const post = this.postService.create(createPost, req.user)
         return 'all posts'
     }

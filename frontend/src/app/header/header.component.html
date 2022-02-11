@@ -1,7 +1,7 @@
 <div class="nav-menu">
-    <div class="content-nav-menu">
+    <div class="content-nav-menu" (mousemove)="checkLogIn()">
         <h4>Навигационное меню</h4>
-        <a class="link-router" routerLink="">Главная</a>
+        <a class="link-router" routerLink="" (click)="checkLogIn()">Главная</a>
         <ng-container *ngIf="isLogIn; else noLogIn">
             <a class="link-router" routerLink="posts">Мои записи</a>
             <a class="link-router" routerLink="profile">Личный кабинет</a>

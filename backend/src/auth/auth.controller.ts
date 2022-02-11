@@ -13,7 +13,6 @@ export class AuthController {
     @UseGuards(LocalAuthGuard)
     @Post('login')
     async login(@Request() req) {
-        console.log(req.user);
         const token = this.authService.login(req.user)
         return token;
         //return this.authService.login(req.user);
@@ -22,7 +21,6 @@ export class AuthController {
     @UseGuards(JwtAuthGuard)
     @Get('profile')
     async getProfile(@Request() req) {
-        console.log(req.user);
         return req.user
     }
 }

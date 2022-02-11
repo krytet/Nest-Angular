@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router"
+import { HeaderComponent } from '../header/header.component';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +18,8 @@ export class LoginComponent implements OnInit {
   isLoading = false
   isErorr = false
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router,
+              private authService: AuthenticationService) { }
 
   ngOnInit(): void {
   }
@@ -32,6 +35,7 @@ export class LoginComponent implements OnInit {
       }
     ).subscribe((res: any) => {
       localStorage.setItem('token', res.access_token)
+      this.authService.logIn()
       this.router.navigate(['profile'])
     }, ((res: any)=> {
       console.error('Не Удолось войти');

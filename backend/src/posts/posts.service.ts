@@ -22,8 +22,6 @@ export class PostsService {
     }
 
     async getMyPost(user: UserFromJWT) {
-        console.log('function find');
-        
         return await this.postModel.find({
             author: user.userId,
         })
