@@ -12,7 +12,7 @@
         ></app-form-create-post>
     </app-dialog-window>
     <hr>
-    <div class="posts-area" *ngIf="posts; else empty">
+    <div class="posts-area" *ngIf="posts.length > 0; else empty">
         <div class="post-item" *ngFor="let post of posts">
             <app-post
                 [post]="post"

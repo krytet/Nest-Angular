@@ -1,7 +1,7 @@
 <div class="posts-page">
     <h2>Новые записи</h2>
     <hr>
-    <div class="posts-area">
+    <div class="posts-area" *ngIf="posts.length > 0; else empty">
         <div class="post-item" *ngFor="let post of posts">
             <app-post
                 [post]="post"
@@ -9,4 +9,8 @@
             <hr>
         </div>
     </div>
+    <ng-template #empty>
+        <h2> Записей не найдено</h2>
+    </ng-template>
+
 </div>

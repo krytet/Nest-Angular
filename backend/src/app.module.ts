@@ -8,6 +8,7 @@ import { PostsModule } from './posts/posts.module';
 
 @Module({
   imports: [
+    //MongooseModule.forRoot(`mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.pasoh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`),
     MongooseModule.forRoot('mongodb+srv://krytet:krytet@cluster0.pasoh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'),
     UsersModule,
     AuthModule,
